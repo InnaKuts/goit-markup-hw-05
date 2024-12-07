@@ -453,5 +453,69 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal -->
+    <div class="modal-overlay is-open">
+      <div class="modal">
+        <div class="modal-header-row">
+          <button type="button" class="modal-close-button">
+            <svg class="modal-close-button-icon" width="24" height="24">
+              <use href="./images/icons.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <p class="modal-title">Leave your contacts and we will call you back</p>
+        <form class="contact-form">
+          <label class="contact-form-label">
+            <p class="contact-form-label-text">Name</p>
+            <input
+              class="contact-form-input"
+              type="text"
+              name="username"
+              required
+            />
+          </label>
+          <label class="contact-form-label">
+            <p class="contact-form-label-text">Phone</p>
+            <input
+              class="contact-form-input"
+              type="tel"
+              name="contact_tel"
+              required
+            />
+          </label>
+          <label class="contact-form-label">
+            <p class="contact-form-label-text">Email</p>
+            <input class="contact-form-input" type="email" name="email" />
+          </label>
+          <label class="contact-form-label">
+            <p class="contact-form-label-text">Comment</p>
+            <textarea
+              name="comment"
+              placeholder="Text input"
+              rows="5"
+            ></textarea>
+          </label>
+          <label class="contact-form-checkbox-label">
+            <input
+              class="contact-form-checkbox"
+              type="checkbox"
+              name="accept_terms"
+              value="accept_terms"
+              id="accept_terms"
+            />
+            <p class="contact-form-checkbox-label-text">
+              I accept the terms and conditions of the
+              <a class="contact-form-checkbox-label-text-link" href=""
+                >Privacy Policy</a
+              >
+            </p>
+          </label>
+          <div class="contact-form-button-container">
+            <button type="submit" class="contact-form-button">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
