@@ -463,7 +463,7 @@ button {
 .footer .container {
   display: flex;
   align-items: baseline;
-  gap: 120px;
+  gap: 60px;
 }
 
 .footer-desc {
@@ -541,9 +541,78 @@ button {
   fill: #f4f4fd;
 }
 
+.footer-subscribe-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 24px;
+}
+
+.subscribe-form-input {
+  height: 40px;
+  min-width: 264px;
+  border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+  background-color: #2e2f42;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  padding: 16px;
+}
+
+.subscribe-form-input::placeholder {
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+}
+
+.subscribe-form-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  height: 40px;
+  border: none;
+  background-color: var(--btn-bg-color, #4d5ae5);
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  padding: 0 24px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-form-button:hover,
+.subscribe-form-button:focus {
+  background-color: #404bbf;
+}
+
+.subscribe-form-button-icon {
+  --color1: white;
+}
+
 .modal-overlay {
   background-color: rgba(0, 0, 0, 0.5);
-
   position: fixed;
   top: 0;
   left: 0;
@@ -638,6 +707,36 @@ button {
   line-height: 14px;
   color: #2e2f42;
   letter-spacing: 0.02em;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #2e2f4266;
+}
+
+.contact-form-input:active,
+.contact-form-input:focus {
+  border-color: #4d5ae5;
+  outline: none;
+}
+
+.contact-form-input[name='username'] {
+  background: url(../images/person.svg) no-repeat 16px 16px;
+  background-repeat: no-repeat;
+  background-size: 18px 24px;
+  background-position: 16px center;
+}
+
+.contact-form-input[name='contact_tel'] {
+  background: url(../images/phone.svg) no-repeat 16px 16px;
+  background-repeat: no-repeat;
+  background-size: 18px 24px;
+  background-position: 16px center;
+}
+
+.contact-form-input[name='email'] {
+  background: url(../images/email.svg) no-repeat 16px 16px;
+  background-repeat: no-repeat;
+  background-size: 18px 24px;
+  background-position: 16px center;
 }
 
 .contact-form textarea {
@@ -648,6 +747,14 @@ button {
   line-height: 14px;
   color: #2e2f42;
   letter-spacing: 0.04em;
+  border-radius: 4px;
+  border: 1px solid #2e2f4266;
+}
+
+.contact-form textarea:active,
+.contact-form textarea:focus {
+  border-color: #4d5ae5;
+  outline: none;
 }
 
 .contact-form textarea::placeholder {
