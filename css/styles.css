@@ -709,70 +709,68 @@ button {
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
-  pointer-events: none; /* Щоб іконка не заважала фокусу на input */
+  pointer-events: none;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-form-input:focus + .input-icon {
-  fill: #4d5ae5; /* Зміна кольору іконки при фокусі */
+  fill: #4d5ae5;
 }
 
-/* Загальні стилі для SVG */
 .svg-icon {
-  position: absolute; /* Абсолютне позиціонування */
-  left: 16px; /* Відстань від лівого краю батьківського елемента */
-  top: 50%; /* Вирівнювання по вертикалі */
-  transform: translateY(-50%); /* Центрування по вертикалі */
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Анімація для кольору іконки */
-  fill: currentColor; /* Використання поточного кольору */
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: currentColor;
 }
 
-/* Стилі для input */
 .input-container input {
-  width: 100%; /* Повна ширина */
-  height: 40px; /* Висота поля */
-  padding-left: 38px; /* Відступ зліва для SVG */
+  width: 100%;
+  height: 40px;
+  padding-left: 38px;
   background-color: transparent;
-  border: 1px solid rgba(46, 47, 66, 0.4); /* Колір рамки */
-  border-radius: 4px; /* Закруглення кутів */
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
   outline: transparent;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Анімація рамки */
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Стиль для input при фокусі */
 .input-container input:focus {
-  border-color: #4d5ae5; /* Зміна кольору рамки при фокусі */
-  outline: none; /* Вимкнення стандартного обведення */
+  border-color: #4d5ae5;
+  outline: none;
 }
 
-/* Зміна кольору SVG при фокусі на input */
 .input-container input:focus + .svg-icon {
-  fill: #4d5ae5; /* Колір іконки при фокусі */
+  fill: #4d5ae5;
 }
 
-/* Стилі для span як кастомної рамки або іконки */
 .input-container span.checkbox-custom {
-  width: 16px; /* Ширина елемента */
-  height: 16px; /* Висота елемента */
-  border: 1px solid rgba(46, 47, 66, 0.4); /* Рамка навколо */
-  border-radius: 2px; /* Закруглення кутів */
-  display: inline-flex; /* Вирівнювання контенту */
-  align-items: center; /* Центрування іконки по вертикалі */
-  justify-content: center; /* Центрування іконки по горизонталі */
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Анімації */
-  fill: transparent; /* Прозорий початковий колір іконки */
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
 }
 
-/* Стиль для span у стані checked */
 .input-container input:checked + span.checkbox-custom {
-  background-color: #404bbf; /* Фон у стані checked */
-  border: none; /* Видалення рамки */
+  background-color: #404bbf;
+  border: none;
 }
 
 .input-container input:checked + span.checkbox-custom .svg-icon {
-  fill: #f4f4fd; /* Зміна кольору іконки */
+  fill: #f4f4fd;
+}
+
+.contact-form-checkbox-link {
+  color: #4d5ae5;
 }
 
 .contact-form {
@@ -783,6 +781,10 @@ button {
 
 .contact-form-field {
   margin-bottom: 8px;
+}
+
+.contact-form-field-comment {
+  margin-bottom: 16px;
 }
 
 .contact-form-label {
@@ -797,7 +799,7 @@ button {
 
 .contact-form-input {
   width: 100%;
-  padding-left: 38px; /* Враховує розмір іконки */
+  padding-left: 38px;
   height: 40px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
