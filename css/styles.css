@@ -694,6 +694,28 @@ button {
   margin-bottom: 16px;
 }
 
+.input-container {
+  position: relative;
+}
+
+.contact-form-input:focus {
+  border-color: #4d5ae5;
+  outline: none;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Щоб іконка не заважала фокусу на input */
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-form-input:focus + .input-icon {
+  fill: #4d5ae5; /* Зміна кольору іконки при фокусі */
+}
+
 /* Загальні стилі для SVG */
 .svg-icon {
   position: absolute; /* Абсолютне позиціонування */
@@ -702,11 +724,6 @@ button {
   transform: translateY(-50%); /* Центрування по вертикалі */
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Анімація для кольору іконки */
   fill: currentColor; /* Використання поточного кольору */
-}
-
-/* Контейнер для input і svg */
-.input-container {
-  position: relative; /* Відносне позиціонування контейнера */
 }
 
 /* Стилі для input */
@@ -752,21 +769,20 @@ button {
 
 .contact-form-input {
   width: 100%;
+  padding-left: 38px; /* Враховує розмір іконки */
   height: 40px;
-  padding: 4px 4px 4px 38px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
-  line-height: 1.17;
-  color: #2e2f42;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  background-color: transparent;
-  outline: none;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-form-input:focus {
   border-color: #4d5ae5;
+  outline: none;
 }
 
 .contact-form-input[name='username'] {
