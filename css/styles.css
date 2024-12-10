@@ -761,16 +761,11 @@ input[name='user-privacy']:checked
   .checkbox-custom {
   background-color: #404bbf;
   border: none;
+  fill: #f4f4fd;
 }
 
 input[name='user-privacy']:focus + .contact-form-checkbox-label .checkbox-icon {
   fill: #4d5ae5;
-}
-
-input[name='user-privacy']:checked
-  + .contact-form-checkbox-label
-  .checkbox-icon {
-  fill: #f4f4fd;
 }
 
 .contact-form-checkbox-link {
@@ -875,35 +870,6 @@ input[name='user-privacy']:checked
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-.contact-form-checkbox-label .checkbox-custom {
-  height: 16px;
-  width: 16px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 2px;
-  display: inline-flex;
-  align-items: center;
-  fill: transparent;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contact-form-checkbox-label .checkbox-custom svg {
-  fill: transparent;
-}
-
-.contact-form-checkbox:checked + .contact-form-checkbox-label .checkbox-custom {
-  background-color: #404bbf;
-  border: none;
-}
-
-.contact-form-checkbox:checked
-  + .contact-form-checkbox-label
-  .checkbox-custom
-  svg {
-  fill: #f4f4fd;
 }
 
 .contact-form-button {
