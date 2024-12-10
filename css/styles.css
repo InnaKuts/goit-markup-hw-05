@@ -727,54 +727,52 @@ button {
   fill: currentColor; /* Використання поточного кольору */
 }
 
-/* Основний стиль для span, який слугує кастомним чекбоксом */
-.input-container span.checkbox-custom {
-  width: 16px; /* Ширина елемента */
-  height: 16px; /* Висота елемента */
-  border: 1px solid rgba(46, 47, 66, 0.4); /* Стандартна рамка */
-  border-radius: 2px; /* Закруглені кути */
-  display: inline-flex; /* Для вирівнювання контенту всередині */
-  align-items: center; /* Центрування по вертикалі */
-  justify-content: center; /* Центрування по горизонталі */
-  background-color: transparent; /* Початковий фон */
-  fill: transparent; /* Початковий колір іконки */
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Анімація змін */
-}
-
-/* Стан checked для input */
-.input-container input:checked + span.checkbox-custom {
-  background-color: #404bbf; /* Колір фону для активного стану */
-  border: none; /* Видалення рамки */
-}
-
-/* Зміна кольору іконки у span в стані checked */
-.input-container input:checked + span.checkbox-custom svg {
-  fill: #f4f4fd; /* Колір іконки для активного стану */
-}
-
-/* Загальні стилі для input */
+/* Стилі для input */
 .input-container input {
   width: 100%; /* Повна ширина */
   height: 40px; /* Висота поля */
-  padding-left: 38px; /* Відступ для іконки */
+  padding-left: 38px; /* Відступ зліва для SVG */
   background-color: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4); /* Колір рамки */
-  border-radius: 4px; /* Закруглення */
+  border-radius: 4px; /* Закруглення кутів */
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Анімація рамки */
 }
 
-/* Зміна стилів input при фокусі */
+/* Стиль для input при фокусі */
 .input-container input:focus {
-  border-color: #4d5ae5; /* Колір рамки при фокусі */
-  outline: none;
+  border-color: #4d5ae5; /* Зміна кольору рамки при фокусі */
+  outline: none; /* Вимкнення стандартного обведення */
 }
 
-/* Зміна кольору іконки, якщо span містить іконку SVG */
+/* Зміна кольору SVG при фокусі на input */
 .input-container input:focus + .svg-icon {
   fill: #4d5ae5; /* Колір іконки при фокусі */
+}
+
+/* Стилі для span як кастомної рамки або іконки */
+.input-container span.checkbox-custom {
+  width: 16px; /* Ширина елемента */
+  height: 16px; /* Висота елемента */
+  border: 1px solid rgba(46, 47, 66, 0.4); /* Рамка навколо */
+  border-radius: 2px; /* Закруглення кутів */
+  display: inline-flex; /* Вирівнювання контенту */
+  align-items: center; /* Центрування іконки по вертикалі */
+  justify-content: center; /* Центрування іконки по горизонталі */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Анімації */
+  fill: transparent; /* Прозорий початковий колір іконки */
+}
+
+/* Стиль для span у стані checked */
+.input-container input:checked + span.checkbox-custom {
+  background-color: #404bbf; /* Фон у стані checked */
+  border: none; /* Видалення рамки */
+}
+
+.input-container input:checked + span.checkbox-custom .svg-icon {
+  fill: #f4f4fd; /* Зміна кольору іконки */
 }
 
 .contact-form {
