@@ -694,6 +694,42 @@ button {
   margin-bottom: 16px;
 }
 
+/* Загальні стилі для SVG */
+.svg-icon {
+  position: absolute; /* Абсолютне позиціонування */
+  left: 16px; /* Відстань від лівого краю батьківського елемента */
+  top: 50%; /* Вирівнювання по вертикалі */
+  transform: translateY(-50%); /* Центрування по вертикалі */
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Анімація для кольору іконки */
+  fill: currentColor; /* Використання поточного кольору */
+}
+
+/* Контейнер для input і svg */
+.input-container {
+  position: relative; /* Відносне позиціонування контейнера */
+}
+
+/* Стилі для input */
+.input-container input {
+  width: 100%; /* Повна ширина */
+  height: 40px; /* Висота поля */
+  padding-left: 48px; /* Відступ зліва для SVG */
+  border: 1px solid rgba(46, 47, 66, 0.4); /* Колір рамки */
+  border-radius: 4px; /* Закруглення кутів */
+  outline: none; /* Прибираємо обводку */
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Анімація рамки */
+}
+
+/* Стиль для input при фокусі */
+.input-container input:focus {
+  border-color: #4d5ae5; /* Зміна кольору рамки при фокусі */
+}
+
+/* Зміна кольору SVG при фокусі на input */
+.input-container input:focus + .svg-icon {
+  fill: #4d5ae5; /* Колір іконки при фокусі */
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
