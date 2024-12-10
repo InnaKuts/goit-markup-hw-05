@@ -742,11 +742,7 @@ button {
   outline: none;
 }
 
-.input-container input:focus + .svg-icon {
-  fill: #4d5ae5;
-}
-
-.input-container span.checkbox-custom {
+.checkbox-custom {
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -760,12 +756,20 @@ button {
   fill: transparent;
 }
 
-.input-container input:checked + span.checkbox-custom {
+input[name='user-privacy']:checked
+  + .contact-form-checkbox-label
+  .checkbox-custom {
   background-color: #404bbf;
   border: none;
 }
 
-.input-container input:checked + span.checkbox-custom .svg-icon {
+input[name='user-privacy']:focus + .contact-form-checkbox-label .checkbox-icon {
+  fill: #4d5ae5;
+}
+
+input[name='user-privacy']:checked
+  + .contact-form-checkbox-label
+  .checkbox-icon {
   fill: #f4f4fd;
 }
 
